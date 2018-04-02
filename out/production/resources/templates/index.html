@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8"/>
     <title>Title</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
 
     <link rel="stylesheet" th:href="@{/style.css}"/>
     <link rel="stylesheet" th:href="@{/bootstrap.css}"/>
 
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyCVQpVXVLkLwQaf5QKczw9ya6-uPcbftqs" type="text/javascript"></script>
+    <script type="text/javascript" th:src="@{https://maps.googleapis.com/maps/api/js(libraries=places, key=AIzaSyCVQpVXVLkLwQaf5QKczw9ya6-uPcbftqs)}" async="async" defer="defer"></script>
     <script type="text/javascript" th:src="@{/jquery.js}"></script>
     <script type="text/javascript" th:src="@{/client.js}"></script>
 </head>
@@ -24,23 +26,40 @@
     </div>
 </div>
 
-    <p></p>
-    <div class="card" align="center">
-        <!--<img src="https://st2.depositphotos.com/1010652/5980/v/950/depositphotos_59808923-stock-illustration-restaurant-symbol-template.jpg" alt="Restaurant"/>-->
-        <div class="container center">
-                <p id="textName" class="lead text-center"></p>
-                <p id="textAddress" class="text-center"></p>
-            <form>
-
-            </form>
-            <div id="container"></div>
+<div class="slider">
+    <div class="slide">
+        <div id="container">
+            <p id="textName" class="lead text-center"></p>
+            <br/>
+            <p id="textAddress" class="text-center"></p>
+            <br/>
+            <p id="textRating" class="text-center"></p>
+            <br/>
+            <div id="photos"></div>
         </div>
     </div>
+    <div class="slide"><p id="textJoke" class="text-center">Please Select/Enter a Food Category. then swipe</p></div>
+
+</div>
+
     <p></p>
     <div class="Btn" align="center">
-        <button id="dislikeBtn" class="buttonRed btn-danger">Dislike</button>
-        <button id="likeBtn" class="buttonGreen btn-success">Like</button>
-    </div>
 
+        <button id="dislikeBtn">Dislike</button>
+        <button id="likeBtn">Like</button>
+
+        <div id="snackbar">YOU LIKED THIS RESTAURANT</div>
+    </div>
 </body>
 </html>
+<!--<div class="card" align="center">-->
+<!--<img src="https://d2gg9evh47fn9z.cloudfront.net/thumb_COLOURBOX20128224.jpg" alt="Avatar"/>-->
+<!--<div class="container center">-->
+<!--&lt;!&ndash;<div id="container">&ndash;&gt;-->
+<!--&lt;!&ndash;<p id="textName" class="lead text-center"></p>&ndash;&gt;-->
+<!--&lt;!&ndash;<p id="textAddress" class="text-center"></p>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--</div>-->
+<!--</div>-->
+<!--<button id="dislikeBtn" class="buttonRed btn-danger">Dislike</button>-->
+<!--<button id="likeBtn" class="buttonGreen btn-success">Like</button>-->
