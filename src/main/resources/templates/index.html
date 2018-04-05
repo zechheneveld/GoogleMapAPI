@@ -8,9 +8,9 @@
 
     <link rel="stylesheet" th:href="@{/style.css}"/>
     <link rel="stylesheet" th:href="@{/bootstrap.css}"/>
-
     <script type="text/javascript" th:src="@{https://maps.googleapis.com/maps/api/js(libraries=places, key=AIzaSyCVQpVXVLkLwQaf5QKczw9ya6-uPcbftqs)}" async="async" defer="defer"></script>
-    <script type="text/javascript" th:src="@{/jquery.js}"></script>
+    <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js}"></script>
+    <!--<script type="text/javascript" th:src="@{/jquery.js}"></script>-->
     <script type="text/javascript" th:src="@{/client.js}"></script>
 </head>
 <body>
@@ -26,7 +26,7 @@
     </div>
 </div>
 
-<div class="slider">
+<div class="slider-container">
     <div class="slide">
         <div id="container">
             <p id="textName" class="lead text-center"></p>
