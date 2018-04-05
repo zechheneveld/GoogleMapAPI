@@ -189,7 +189,7 @@ button:hover:before,button:hover:after{
 
 /*.slider div p{color:#1c1c1c;position:absolute;bottom:-65px; font-family:font; font-size:22px;*/
 /*}*/
-.slider-container{
+.slider{
 
     -webkit-animation:animation ease 1s;animation-delay:.8s;animation-fill-mode:backwards;
     position: center;
